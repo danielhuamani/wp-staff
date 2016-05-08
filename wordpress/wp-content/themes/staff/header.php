@@ -80,16 +80,17 @@
 	?>
 
 	<!-- concatenate and minify for production -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/reset.css" />
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
+	 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/reset.css" />
+	<!--<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" /> -->
 
 	<!-- Lea Verou's Prefix Free, lets you use only un-prefixed properties in yuor CSS files -->
     <script src="<?php echo get_template_directory_uri(); ?>/_/js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/_/js/materialize.min.js"></script>
 
 	<!-- This is an un-minified, complete version of Modernizr.
 		 Before you move to production, you should generate a custom build that only has the detects you need. -->
 	<script src="<?php echo get_template_directory_uri(); ?>/_/js/modernizr-2.8.0.dev.js"></script>
-
+	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_//css/materialize.css"  media="screen,projection"/>
 	<!-- Application-specific meta tags -->
 	<?php
 		// Windows 8
@@ -119,7 +120,6 @@
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
 	<?php wp_head(); ?>
 
 </head>
@@ -129,12 +129,17 @@
 	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 	<div id="wrapper">
 
-		<header id="header" role="banner">
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div class="description"><?php bloginfo( 'description' ); ?></div>
-		</header>
+		<header class="navbar-fixed">
+             <nav class="">
+                <div class="nav-wrapper">
 
-		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
-		</nav>
+                  <ul class="">
+                    <li class="left volver-atras"><span class="" >Inicio</span></li>
+                    <li class="right publicar"> <span class="" >PUBLICAR</span></li>
+
+                  </ul>
+                </div>
+              </nav>
+
+        </header>
 
